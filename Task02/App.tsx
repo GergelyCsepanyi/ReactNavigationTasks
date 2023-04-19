@@ -24,7 +24,6 @@ export default function App() {
           component={SecondScreen}
           options={{headerBackTitle: 'Back'}}
         />
-
         <Stack.Group screenOptions={{presentation: 'modal'}}>
           <Stack.Screen
             name="ThirdScreenModal"
