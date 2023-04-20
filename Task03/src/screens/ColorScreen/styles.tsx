@@ -7,9 +7,11 @@ const ColorScreenStyles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  textStyle: {
-    color: Colors.white,
-    fontSize: 30,
+  textInputStyle: {
+    backgroundColor: 'white',
+    padding: 5,
+    borderRadius: 5,
+    fontSize: 20,
   },
 });
 

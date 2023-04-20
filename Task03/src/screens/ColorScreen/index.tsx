@@ -1,6 +1,6 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, TextInput} from 'react-native';
 import RootStackParamList from '../../interfaces/RootStackParamList';
 import ColorScreenStyles from './styles';
 
@@ -16,7 +16,15 @@ const ColorScreen = ({route}: ColorScreenProps) => {
         ColorScreenStyles.mainContainerStyle,
         {backgroundColor: route.params.color},
       ]}>
-      <Text style={ColorScreenStyles.textStyle}>{route.params.text}</Text>
+      <TextInput
+        style={ColorScreenStyles.textInputStyle}
+        defaultValue={route.params.text}
+        onChangeText={textParam =>
+          route.params.handleTextChange
+            ? route.params.handleTextChange(textParam)
+            : {}
+        }
+      />
     </View>
   );
 };

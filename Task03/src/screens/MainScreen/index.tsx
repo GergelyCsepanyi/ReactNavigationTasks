@@ -12,12 +12,17 @@ type MainScreenProps = NativeStackScreenProps<RootStackParamList, 'MainScreen'>;
 const MainScreen = ({navigation}: MainScreenProps) => {
   const [text, setText] = useState('');
 
+  const handleTextChange = (textParam: string) => {
+    setText(textParam);
+  };
+
   return (
     <SafeAreaView style={MainScreenStyles.mainContainerStyle}>
       <View style={MainScreenStyles.itemsContainerStyle}>
         <TextInput
           style={MainScreenStyles.textInputStyle}
-          onChangeText={setText}
+          defaultValue={text}
+          onChangeText={textParam => handleTextChange(textParam)}
         />
         <View style={MainScreenStyles.buttonContainerStyle}>
           <FilledButton
