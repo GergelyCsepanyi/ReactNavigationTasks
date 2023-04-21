@@ -10,7 +10,7 @@ const FourthScreenModalStyles = StyleSheet.create({
 
   screenButtonContainer: {
     flex: 1,
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
   },
   screenButtonTouchableOpacityStyle: {
     backgroundColor: Colors.grey,

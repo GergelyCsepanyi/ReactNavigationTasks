@@ -1,42 +1,36 @@
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import FirstScreen from './src/screens/FirstScreen';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import SecondScreen from './src/screens/SecondScreen';
-import RootStackParamList from './src/interfaces/RootStackParamList';
-import ThirdScreenModal from './src/screens/ThirdScreenModal';
-import FourthScreenModal from './src/screens/FourthScreenModal';
-import FifthScreen from './src/screens/FifthScreen';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import RootTabParamList from './src/interfaces/RootTabParamList';
+import FirstStackScreen from './src/screens/FirstStackScreen';
+import SecondStackScreen from './src/screens/SecondStackScreen';
 
 export default function App() {
-  const Stack = createNativeStackNavigator<RootStackParamList>();
+  const Tab = createBottomTabNavigator<RootTabParamList>();
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="FirstScreen">
-        <Stack.Screen
-          name="FirstScreen"
-          component={FirstScreen}
-          options={{headerBackTitle: 'Back'}}
+      <Tab.Navigator
+        initialRouteName="FirstStackScreen"
+        screenOptions={{
+          tabBarLabelPosition: 'beside-icon',
+          tabBarLabelStyle: {
+            fontWeight: '400',
+            fontSize: 15,
+          },
+          tabBarIconStyle: {display: 'none'},
+        }}>
+        <Tab.Screen
+          name="FirstStackScreen"
+          component={FirstStackScreen}
+          options={{tabBarLabel: 'FirstStackScreen'}}
         />
-        <Stack.Screen
-          name="SecondScreen"
-          component={SecondScreen}
-          options={{headerBackTitle: 'Back'}}
+        <Tab.Screen
+          name="SecondStackScreen"
+          component={SecondStackScreen}
+          options={{tabBarLabel: 'SecondStackScreen'}}
         />
-        <Stack.Group screenOptions={{presentation: 'modal'}}>
-          <Stack.Screen
-            name="ThirdScreenModal"
-            component={ThirdScreenModal}
-            options={{headerShown: false}}
-          />
-          <Stack.Screen
-            name="FourthScreenModal"
-            component={FourthScreenModal}
-          />
-        </Stack.Group>
-        <Stack.Screen name="FifthScreen" component={FifthScreen} options={{}} />
-      </Stack.Navigator>
+      </Tab.Navigator>
     </NavigationContainer>
   );
 }

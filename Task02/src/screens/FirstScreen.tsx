@@ -29,14 +29,6 @@ const FirstScreen = ({navigation}: FirstScreenProps) => {
         touchableOpacityStyles={FirstScreenStyles.buttonTouchableOpacityStyle}
         textStyles={FirstScreenStyles.buttonTextStyle}
       />
-      <FilledButton
-        onPress={() => {
-          navigation.navigate('FourthScreenModal');
-        }}
-        text="Modal VC4"
-        touchableOpacityStyles={FirstScreenStyles.buttonTouchableOpacityStyle}
-        textStyles={FirstScreenStyles.buttonTextStyle}
-      />
     </View>
   );
 };

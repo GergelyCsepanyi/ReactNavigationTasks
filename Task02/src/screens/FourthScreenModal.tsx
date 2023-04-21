@@ -25,19 +25,6 @@ const FourthScreenModal = ({navigation}: FourthScreenModalProps) => {
           textStyles={FourthScreenModalStyles.buttonTextStyle}
         />
       </View>
-
-      <View style={FourthScreenModalStyles.closeButtonContainer}>
-        <FilledButton
-          onPress={() => {
-            navigation.goBack();
-          }}
-          text="Close"
-          touchableOpacityStyles={
-            FourthScreenModalStyles.closeButtonTouchableOpacityStyle
-          }
-          textStyles={FourthScreenModalStyles.buttonTextStyle}
-        />
-      </View>
     </View>
   );
 };
