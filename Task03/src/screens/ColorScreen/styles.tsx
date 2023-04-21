@@ -4,12 +4,14 @@ import Colors from '../../theme/Colors';
 const ColorScreenStyles = StyleSheet.create({
   mainContainerStyle: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
   },
+  textInputContainerStyle: {width: '50%'},
   textInputStyle: {
-    backgroundColor: 'white',
+    backgroundColor: Colors.white,
     padding: 5,
+    marginTop: 150,
     borderRadius: 5,
     fontSize: 20,
   },

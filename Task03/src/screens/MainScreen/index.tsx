@@ -16,6 +16,14 @@ const MainScreen = ({navigation}: MainScreenProps) => {
     setText(textParam);
   };
 
+  const handleNavigate = (color: string) => {
+    navigation.navigate('ColorScreen', {
+      color,
+      text,
+      handleTextChange,
+    });
+  };
+
   return (
     <SafeAreaView style={MainScreenStyles.mainContainerStyle}>
       <View style={MainScreenStyles.itemsContainerStyle}>
@@ -27,27 +35,23 @@ const MainScreen = ({navigation}: MainScreenProps) => {
         <View style={MainScreenStyles.buttonContainerStyle}>
           <FilledButton
             title="Push Red"
-            onPress={() =>
-              navigation.navigate('ColorScreen', {color: Colors.red, text})
-            }
+            onPress={() => {
+              handleNavigate(Colors.red);
+            }}
             backgroundColor={Colors.red}
           />
         </View>
         <View style={MainScreenStyles.buttonContainerStyle}>
           <FilledButton
             title="Push Green"
-            onPress={() =>
-              navigation.navigate('ColorScreen', {color: Colors.green, text})
-            }
+            onPress={() => handleNavigate(Colors.green)}
             backgroundColor={Colors.green}
           />
         </View>
         <View style={MainScreenStyles.buttonContainerStyle}>
           <FilledButton
             title="Push Blue"
-            onPress={() =>
-              navigation.navigate('ColorScreen', {color: Colors.blue, text})
-            }
+            onPress={() => handleNavigate(Colors.blue)}
             backgroundColor={Colors.blue}
           />
         </View>

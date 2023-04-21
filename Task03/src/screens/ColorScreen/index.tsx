@@ -16,15 +16,17 @@ const ColorScreen = ({route}: ColorScreenProps) => {
         ColorScreenStyles.mainContainerStyle,
         {backgroundColor: route.params.color},
       ]}>
-      <TextInput
-        style={ColorScreenStyles.textInputStyle}
-        defaultValue={route.params.text}
-        onChangeText={textParam =>
-          route.params.handleTextChange
-            ? route.params.handleTextChange(textParam)
-            : {}
-        }
-      />
+      <View style={ColorScreenStyles.textInputContainerStyle}>
+        <TextInput
+          style={ColorScreenStyles.textInputStyle}
+          defaultValue={route.params.text}
+          onChangeText={textParam =>
+            route.params.handleTextChange
+              ? route.params.handleTextChange(textParam)
+              : {}
+          }
+        />
+      </View>
     </View>
   );
 };
