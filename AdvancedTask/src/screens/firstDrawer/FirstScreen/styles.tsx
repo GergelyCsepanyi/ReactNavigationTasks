@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 import Colors from '../../../theme/Colors';
 
-const FirstScreenStyles = StyleSheet.create({
+const styles = StyleSheet.create({
   viewStyle: {
     flex: 1,
     justifyContent: 'center',
@@ -21,4 +21,4 @@ const FirstScreenStyles = StyleSheet.create({
   },
 });
 
-export default FirstScreenStyles;
+export default styles;

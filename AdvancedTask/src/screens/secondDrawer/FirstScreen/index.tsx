@@ -1,7 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
 import FilledButton from '../../../components/FilledButton';
-import FirstScreenStyles from './styles';
+import styles from './styles';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import RootStackParamList from '../../../interfaces/SecondDrawerRootStackParamList';
 
@@ -12,14 +12,14 @@ type FirstScreenProps = NativeStackScreenProps<
 
 const FirstScreen = ({navigation}: FirstScreenProps) => {
   return (
-    <View style={FirstScreenStyles.viewStyle}>
+    <View style={styles.viewStyle}>
       <FilledButton
         onPress={() => {
           navigation.navigate('SecondScreen');
         }}
         text="Push First"
-        touchableOpacityStyles={FirstScreenStyles.buttonTouchableOpacityStyle}
-        textStyles={FirstScreenStyles.buttonTextStyle}
+        touchableOpacityStyles={styles.buttonTouchableOpacityStyle}
+        textStyles={styles.buttonTextStyle}
       />
     </View>
   );

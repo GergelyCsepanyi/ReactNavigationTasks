@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 import Colors from '../../../theme/Colors';
 
-const ThirdScreenStyles = StyleSheet.create({
+const styles = StyleSheet.create({
   viewStyle: {
     flex: 1,
     justifyContent: 'center',
@@ -18,4 +18,4 @@ const ThirdScreenStyles = StyleSheet.create({
   },
 });
 
-export default ThirdScreenStyles;
+export default styles;

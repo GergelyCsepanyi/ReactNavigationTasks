@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 import Colors from '../../../theme/Colors';
 
-const ThirdScreenModalStyles = StyleSheet.create({
+const styles = StyleSheet.create({
   viewContainer: {
     flex: 1,
     backgroundColor: Colors.lightPurple,
@@ -33,4 +33,4 @@ const ThirdScreenModalStyles = StyleSheet.create({
   },
 });
 
-export default ThirdScreenModalStyles;
+export default styles;

@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 import Colors from '../../../theme/Colors';
 
-const SecondScreenStyles = StyleSheet.create({
+const styles = StyleSheet.create({
   viewStyle: {
     flex: 1,
     justifyContent: 'flex-end',
@@ -21,4 +21,4 @@ const SecondScreenStyles = StyleSheet.create({
   },
 });
 
-export default SecondScreenStyles;
+export default styles;

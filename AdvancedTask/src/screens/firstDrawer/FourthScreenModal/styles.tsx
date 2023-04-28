@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 import Colors from '../../../theme/Colors';
 
-const FourthScreenModalStyles = StyleSheet.create({
+const styles = StyleSheet.create({
   viewContainer: {
     flex: 1,
     backgroundColor: Colors.lightBlue,
@@ -37,4 +37,4 @@ const FourthScreenModalStyles = StyleSheet.create({
   },
 });
 
-export default FourthScreenModalStyles;
+export default styles;

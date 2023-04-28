@@ -3,7 +3,7 @@ import {View} from 'react-native';
 import FilledButton from '../../../components/FilledButton';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import RootStackParamList from '../../../interfaces/FirstDrawerRootStackParamList';
-import FourthScreenModalStyles from './styles';
+import styles from './styles';
 
 type FourthScreenModalProps = NativeStackScreenProps<
   RootStackParamList,
@@ -12,17 +12,15 @@ type FourthScreenModalProps = NativeStackScreenProps<
 
 const FourthScreenModal = ({navigation}: FourthScreenModalProps) => {
   return (
-    <View style={FourthScreenModalStyles.viewContainer}>
-      <View style={FourthScreenModalStyles.screenButtonContainer}>
+    <View style={styles.viewContainer}>
+      <View style={styles.screenButtonContainer}>
         <FilledButton
           onPress={() => {
             navigation.navigate('FifthScreen');
           }}
           text="Push VC5"
-          touchableOpacityStyles={
-            FourthScreenModalStyles.screenButtonTouchableOpacityStyle
-          }
-          textStyles={FourthScreenModalStyles.buttonTextStyle}
+          touchableOpacityStyles={styles.screenButtonTouchableOpacityStyle}
+          textStyles={styles.buttonTextStyle}
         />
       </View>
     </View>
